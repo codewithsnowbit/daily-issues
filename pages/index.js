@@ -2,8 +2,8 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 export async function getServerSideProps(){
-  const res = await fetch('https://3000-codewithsno-dailyissues-4z0lo7u8fld.ws-us43.gitpod.io/api/issues')
-  const data = res.json()
+  const res = await fetch('http://localhost:3000/api/issues')
+  const data = await res.json()
 
   return { props: {data}}
 }
